@@ -1,0 +1,14 @@
+Buffer可以进行高效的数据操作，其中有四个重要索引：mark(标记),position(位置),limit(界限)和capacity(容量)
+	capacity：缓冲区的容量,不变的；
+	limit：缓冲区还有多少数据能够取出或者缓冲区还有多少容量用于存放数据；
+	position：相当于一个游标（cursor），记录我们从哪里开始写数据，从哪里开始读数据。
+	三者关系：limit与position的差总是表示Buffer总可以读的数据，或者Buffer中可以写数据的容量。
+	还有position总是小于等于limit，limit总是小于等于capacity。
+	
+几个重要方法：
+clear():清空缓存区，将position设置为0，limit设置为容量。调用此方法覆写缓存。
+flip():将limit设置为position，position设置为0.用于准备读出Buffer中的数据
+mark():将mark设置为position
+remaining():返回(limit-position)
+hasRemaining():若有介于position和limit之间的元素，返回true
+rewind():将position返回到开始部分，打印时，只打印position到limit之间的值，所以打印去要掉该方法
