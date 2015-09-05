@@ -1,0 +1,15 @@
+gnore files
+.settings
+.classpath
+.project
+.tomcatplugin
+target
+work
+.tomcatplugin
+*.log
+.idea
+*.iml
+*.zip
+*.tar.gz
+*.tar.bz2
+*.apk
