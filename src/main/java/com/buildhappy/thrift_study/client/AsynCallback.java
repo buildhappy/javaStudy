@@ -1,9 +1,9 @@
-package com.buildhappy.thriftStudy.client;
+package com.buildhappy.thrift_study.client;
 
 import java.util.concurrent.CountDownLatch;
 
 import org.apache.thrift.async.AsyncMethodCallback;
-import com.buildhappy.thriftStudy.thriftGen.ThriftService.AsyncClient.queryUser_call;
+import com.buildhappy.thrift_study.thriftGen.ThriftService.AsyncClient.queryUser_call;
 
 /**
  * @author WaterHsu@xiu8.com

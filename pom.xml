@@ -89,5 +89,12 @@
 		  <version>0.8.0</version>
 	  </dependency>
 <!-- end for thrift-->
+<!-- begin for kafka-->
+	  <dependency>
+		  <groupId>org.apache.kafka</groupId>
+		  <artifactId>kafka_2.10</artifactId>
+		  <version>0.8.2.1</version>
+	  </dependency>
+<!-- end for kafka-->
   </dependencies>
 </project>
