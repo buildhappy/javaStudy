@@ -1,4 +1,4 @@
-package com.buildhappy.kafka_study.producer;
+package com.buildhappy.kafkastudy.producer;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;

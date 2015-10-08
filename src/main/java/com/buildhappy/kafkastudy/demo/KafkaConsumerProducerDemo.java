@@ -1,8 +1,8 @@
-package com.buildhappy.kafka_study.demo;
+package com.buildhappy.kafkastudy.demo;
 
-import com.buildhappy.kafka_study.KafkaProperties;
-import com.buildhappy.kafka_study.consumer.KafkaConsumer;
-import com.buildhappy.kafka_study.producer.KafkaProducer;
+import com.buildhappy.kafkastudy.KafkaProperties;
+import com.buildhappy.kafkastudy.consumer.KafkaConsumer;
+import com.buildhappy.kafkastudy.producer.KafkaProducer;
 
 public class KafkaConsumerProducerDemo{
     public static void main(String[] args){

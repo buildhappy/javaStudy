@@ -1,11 +1,8 @@
-package com.buildhappy.kafka_study.consumer;
+package com.buildhappy.kafkastudy.consumer;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
-import com.buildhappy.kafka_study.KafkaProperties;
+import com.buildhappy.kafkastudy.KafkaProperties;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;

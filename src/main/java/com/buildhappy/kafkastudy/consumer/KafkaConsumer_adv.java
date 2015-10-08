@@ -1,6 +1,6 @@
-package com.buildhappy.kafka_study.consumer;
+package com.buildhappy.kafkastudy.consumer;
 
-import com.buildhappy.kafka_study.KafkaProperties;
+import com.buildhappy.kafkastudy.KafkaProperties;
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;

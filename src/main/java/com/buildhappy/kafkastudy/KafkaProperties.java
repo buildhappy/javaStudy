@@ -1,4 +1,4 @@
-package com.buildhappy.kafka_study;
+package com.buildhappy.kafkastudy;
 
 public interface KafkaProperties{
     final static String zkConnect = "10.22.10.139:2181";
