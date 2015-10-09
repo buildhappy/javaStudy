@@ -36,7 +36,7 @@
     <dependency>
 		<groupId>org.apache.httpcomponents</groupId>
 		<artifactId>httpclient</artifactId>
-		<version>4.3.5</version>
+		<version>4.4.1</version>
 	</dependency>
     
     <!-- begin for json -->
@@ -95,6 +95,23 @@
 		  <artifactId>kafka_2.10</artifactId>
 		  <version>0.8.2.1</version>
 	  </dependency>
-<!-- end for kafka-->
+<!-- begin for kafka-->
+<!-- begin for httpasyncclient-->
+	  <dependency>
+		  <groupId>org.apache.httpcomponents</groupId>
+		  <artifactId>httpasyncclient</artifactId>
+		  <version>4.1</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.apache.httpcomponents</groupId>
+		  <artifactId>httpcore-nio</artifactId>
+		  <version>4.4.1</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.apache.httpcomponents</groupId>
+		  <artifactId>httpcore</artifactId>
+		  <version>4.4.1</version>
+	  </dependency><!--httpclient要用4.4以上-->
+<!-- end for httpasyncclient-->
   </dependencies>
 </project>
