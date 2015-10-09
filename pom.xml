@@ -113,5 +113,10 @@
 		  <version>4.4.1</version>
 	  </dependency><!--httpclient要用4.4以上-->
 <!-- end for httpasyncclient-->
+	  <dependency>
+		  <groupId>com.google.guava</groupId>
+		  <artifactId>guava</artifactId>
+		  <version>16.0.1</version>
+	  </dependency>
   </dependencies>
 </project>

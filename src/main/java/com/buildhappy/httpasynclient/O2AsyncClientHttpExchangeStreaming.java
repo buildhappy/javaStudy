@@ -20,22 +20,24 @@ import java.util.concurrent.Future;
  * @date 2015-10-09 上午10:10:51
  */
 public class O2AsyncClientHttpExchangeStreaming {
-    public static void main(String[] args) throws Exception{
-        CloseableHttpAsyncClient httpClient = HttpAsyncClients.createDefault();
-        try{
-            httpClient.start();
-            Future<Boolean> future = httpClient.execute(HttpAsyncMethods.createGet("http://cis.sankuai.com/open/home"),
-                    new MyResponseConsumer() , null);
+    public static void main(final String[] args) throws Exception {
+        CloseableHttpAsyncClient httpclient = HttpAsyncClients.createDefault();
+        try {
+            httpclient.start();
+            Future<Boolean> future = httpclient.execute(
+                    HttpAsyncMethods.createGet("http://cis.sankuai.com/open/home"),
+                    new MyResponseConsumer(), null);
             Boolean result = future.get();
-            if(result != null && result.booleanValue()){
+            if (result != null && result.booleanValue()) {
                 System.out.println("Request successfully executed");
-            }else {
+            } else {
                 System.out.println("Request failed");
             }
             System.out.println("Shutting down");
-        }finally {
-            httpClient.close();
+        } finally {
+            httpclient.close();
         }
+        System.out.println("Done");
     }
     static class MyResponseConsumer extends AsyncCharConsumer<Boolean>{
 

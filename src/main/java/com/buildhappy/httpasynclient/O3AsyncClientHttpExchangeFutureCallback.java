@@ -27,9 +27,9 @@ public class O3AsyncClientHttpExchangeFutureCallback {
         try {
             httpclient.start();
             final HttpGet[] requests = new HttpGet[] {
-                    new HttpGet("http://www.apache.org/"),
-                    new HttpGet("https://www.verisign.com/"),
-                    new HttpGet("http://www.google.com/")
+                    new HttpGet("http://cis.sankuai.com/open/home"),
+                    new HttpGet("http://cis.sankuai.com/open/home"),
+                    new HttpGet("http://cis.sankuai.com/open/home")
             };
             final CountDownLatch latch = new CountDownLatch(requests.length);
             for (final HttpGet request: requests) {
