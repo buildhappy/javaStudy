@@ -69,6 +69,11 @@
 			<classifier>jdk15</classifier>
 		</dependency>
 <!-- end for json -->
+	  <dependency>
+		  <groupId>com.alibaba</groupId>
+		  <artifactId>fastjson</artifactId>
+		  <version>1.2.7</version>
+	  </dependency>
 
 <!--start for netty -->
 	  	<dependency>
@@ -118,5 +123,11 @@
 		  <artifactId>guava</artifactId>
 		  <version>16.0.1</version>
 	  </dependency>
+	  <dependency>
+		  <groupId>org.json</groupId>
+		  <artifactId>json</artifactId>
+		  <version>20150729</version>
+	  </dependency>
+
   </dependencies>
 </project>
