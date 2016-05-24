@@ -1,7 +1,7 @@
-package com.buildhappy.thrift_study.server;
+package com.buildhappy.thriftstudy.server;
 
-import com.buildhappy.thrift_study.thriftGen.ThriftService;
-import com.buildhappy.thrift_study.thriftGen.User;
+import com.buildhappy.thriftstudy.thriftGen.ThriftService;
+import com.buildhappy.thriftstudy.thriftGen.User;
 
 import java.util.ArrayList;
 import java.util.HashMap;

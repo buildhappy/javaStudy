@@ -1,12 +1,12 @@
-package com.buildhappy.thrift_study.client;
+package com.buildhappy.thriftstudy.client;
 
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import com.buildhappy.thrift_study.thriftGen.ThriftService;
-import com.buildhappy.thrift_study.thriftGen.User;
+import com.buildhappy.thriftstudy.thriftGen.ThriftService;
+import com.buildhappy.thriftstudy.thriftGen.User;
 import org.apache.thrift.async.TAsyncClientManager;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TCompactProtocol;

@@ -1,6 +1,6 @@
-package com.buildhappy.thrift_study.server;
+package com.buildhappy.thriftstudy.server;
 
-import com.buildhappy.thrift_study.thriftGen.ThriftService;
+import com.buildhappy.thriftstudy.thriftGen.ThriftService;
 import org.apache.thrift.TProcessor;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TCompactProtocol;

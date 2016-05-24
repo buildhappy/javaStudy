@@ -1,9 +1,10 @@
-package com.buildhappy.thrift_study.client;
+package com.buildhappy.thriftstudy.client;
 
 import java.util.concurrent.CountDownLatch;
 
 import org.apache.thrift.async.AsyncMethodCallback;
-import com.buildhappy.thrift_study.thriftGen.ThriftService.AsyncClient.queryUser_call;
+import com.buildhappy.thriftstudy.thriftGen.ThriftService.AsyncClient.queryUser_call;
+import org.junit.Test;
 
 /**
  * @author WaterHsu@xiu8.com
@@ -16,7 +17,7 @@ public class AsynCallback implements AsyncMethodCallback<queryUser_call> {
 	public AsynCallback(CountDownLatch latch){
 		this.latch = latch;
 	}
-	
+	@Test
 	public void onComplete(queryUser_call arg0) {
 		System.out.println("onComplete");
 		try{
