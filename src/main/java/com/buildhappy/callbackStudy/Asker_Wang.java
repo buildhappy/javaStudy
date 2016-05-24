@@ -40,6 +40,7 @@ public class Asker_Wang implements CallBack{
     public void play(){
         System.out.println("Outgoing...");
     }
+
     public void solve(String result) {
         System.out.println("The answer from Answer_Li is:" + result);
     }

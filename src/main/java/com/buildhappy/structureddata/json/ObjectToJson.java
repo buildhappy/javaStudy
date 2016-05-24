@@ -33,7 +33,8 @@ public class ObjectToJson {
 	 * 将对象转换成json数据
 	 */
 	public static void objectToJson(){
-		Apk apk = new Apk("222" , "343",null,null,null);
+		Apk apk;
+		apk = new Apk("222" , "343",null,null,null);
 		Apk apk2 = new Apk("22245" , "343",null,null,null);
 		JSONArray jsonArray = JSONArray.fromObject(apk);
 		jsonArray.add(apk2);
