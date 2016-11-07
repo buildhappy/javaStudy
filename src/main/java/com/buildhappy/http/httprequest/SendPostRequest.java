@@ -1,6 +1,8 @@
 package com.buildhappy.http.httprequest;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -257,5 +259,12 @@ public class SendPostRequest {
 		}catch (Exception e){
 
 		}
+	}
+
+	public static void sendPostToServer() throws Exception{
+		InputStream inputStream = new FileInputStream("/Users/caijianfu02/Desktop/test");
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		HttpPost httpPost = new HttpPost("http://yf-data-cis-channel03.yf.sankuai.com:8080/alipay/api/poi");
+		//httpPost.setEntity();
 	}
 }

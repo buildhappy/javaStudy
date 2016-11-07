@@ -60,12 +60,12 @@ enum Grade2{  //class
 	public abstract String toLocaleString();
 }
 
-/*以下代码与enum Grade2{A,B,C,D,E}等价
+/*以下代码与enum Grade2{A,B,SizeTest,D,E}等价
  class Grade{
 	private Grade(){}
 	public static Grade A = new Grade();
 	public static Grade B = new Grade();
-	public static Grade C = new Grade();
+	public static Grade SizeTest = new Grade();
 	public static Grade D = new Grade();
 	public static Grade E = new Grade();
 }

@@ -1,55 +1,45 @@
 package com.buildhappy.test;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
+import com.google.common.collect.Lists;
+import it.sauronsoftware.cron4j.Scheduler;
+import org.apache.commons.collections.map.HashedMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by caijianfu02 on 16/5/3.
  */
 public class TimerTest {
-    private static Timer timer = new Timer();
-    private static final long SYNC_LOOP_MILLIS = 10000L;
-
-    private static final long START_DELAY_MILLIS = 1000L;
+    //private static Timer timer = new Timer();
     public static void main(String[] args){
-        CountDownLatch latch = new CountDownLatch(1);
-        //ThreadLocal threadLocal = new ThreadLocal();
-        Map<String , Object> ops = new HashMap<String , Object>();
-        ops.put("status", "1");
-        ops.put("countdownlatch" , latch);
-        println(ops.get("status"));
-        println(ops.get("countdownlatch"));
+        Pattern pattern = Pattern.compile("已领[0-9]*");
+//        Pattern pattern = Pattern.compile("[0-9]*(\\.?)[0-9]*");
+        Matcher matcher = pattern.matcher("已领23");
+        println(matcher.matches());
+        matcher = pattern.matcher("23");
+        println(matcher.matches());
+        matcher = pattern.matcher("qwrg12");
+        println(matcher.matches());
+        matcher = pattern.matcher("123fsfd");
+        println(matcher.matches());
+
+        String drawInfo = "已享122";
+        println("原始:" + drawInfo);
+        String salesMsg = drawInfo.substring(2 , drawInfo.length());
+        println("salesMsg:" + salesMsg);
+        //转换成旧版支付宝的销量信息格式
+        drawInfo = new StringBuffer(salesMsg).append("人").append(drawInfo.substring(0 , 2)).toString();
+        println(drawInfo);
     }
 
     public static void println(Object o){
         System.out.println(o);
-    }
-
-    static class Thread1 implements Runnable{
-        Integer i = new Integer(2);
-        public void run() {
-            new Thread(new Thread2(i)).start();
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            println(i);
-        }
-    }
-
-    static class Thread2 implements Runnable{
-        Integer i;
-        public Thread2(Integer i){
-            this.i = i;
-        }
-
-        public void run() {
-            println("thread2:" + i);
-            i = new Integer(3);
-        }
     }
 }

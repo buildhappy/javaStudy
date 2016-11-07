@@ -1,7 +1,5 @@
 package com.buildhappy.structureddata.dom;
 
-import org.junit.Before;
-import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -34,7 +32,6 @@ public class DomParserOperat {
 	 * @throws Exception 
 	 */
 	private Document document;
-	@Before
 	public void before() throws Exception{
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
@@ -42,7 +39,6 @@ public class DomParserOperat {
 	}
 	
 	//遍历
-	@Test
 	public void listXml() throws ParserConfigurationException, SAXException, Exception{
 		list(document);
 	}
@@ -58,7 +54,6 @@ public class DomParserOperat {
 	
 	
 	//读取书名节点的值：<书名>javaweb开发</书名>
-	@Test
 	public void test1(){
 		Document document = this.document;
 		Node node = document.getElementsByTagName("书名").item(0);
@@ -67,7 +62,6 @@ public class DomParserOperat {
 	}
 	
 	//读取书名属性的值：<售价 type="rmb">39.00元</售价> 
-	@Test
 	public void test2(){
 		Document document = this.document;
 		Node node = document.getElementsByTagName("售价").item(0);
@@ -77,7 +71,6 @@ public class DomParserOperat {
 	}
 	
 	//向xml文档中添加售价节点
-	@Test
 	public void test3() throws Exception{
 		Document document = this.document;
 		//创建要挂的节点
@@ -95,7 +88,6 @@ public class DomParserOperat {
 	
 	
 	//向xml文档中指定位置上添加售价节点
-	@Test
 	public void test4() throws Exception{
 		Document document = this.document;
 		
@@ -117,7 +109,6 @@ public class DomParserOperat {
 	}
 	
 	//向xml文档添加节点属性
-	@Test
 	public void test5() throws Exception{
 		Document document = this.document;
 		
@@ -134,7 +125,6 @@ public class DomParserOperat {
 	
 	
 	//删除xml文档中的售价节点
-	@Test
 	public void test6() throws Exception{
 		
 		Document document = this.document;
@@ -155,7 +145,6 @@ public class DomParserOperat {
 	}
 	
 	//删除2   : 删除售价节点所在的书结点
-	@Test
 	public void test7() throws Exception{
 		
 		Document document = this.document;
@@ -172,7 +161,6 @@ public class DomParserOperat {
 	}
 	
 	
-	@Test
 	public void test8() throws Exception{
 		Document document = this.document;
 		document.getElementsByTagName("售价").item(1).setTextContent("19元");
