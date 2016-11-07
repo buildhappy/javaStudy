@@ -157,6 +157,7 @@ public class OsteoIndex {
         }
         return -1;
     }
+
     public static void main(String[] args){
         double[] data = new double[]{1.1, 2.5, 3.3, 3.3, 3.3 ,2.3};
         int[] signData = intDataDiff(sign(doubleDataDiff(data)));
